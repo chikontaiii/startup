@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-family: '"Plus Jakarta Sans"', sans-serif;
+    background-color: #fdfcfa;
+    color: #222220;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: '"Space Grotesk"', sans-serif;
+    letter-spacing: -0.025em;
+  }
+}
+
+@layer components {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .surface {
+    background: #ffffff;
+    border: 1px solid #ede8e0;
+  }
+
+  .surface-warm {
+    background: #f7f4ef;
+    border: 1px solid #ede8e0;
+  }
+
+  .accent-text {
+    color: #2a704f;
+  }
+
+  .accent-bg {
+    background: #2a704f;
+  }
+
+  .accent-border {
+    border-color: #2a704f;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f7f4ef;
+}
+::-webkit-scrollbar-thumb {
+  background: #c4bba9;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a89e8a;
+}
+
+::selection {
+  background: #bbe1c9;
+  color: #194533;
+}
